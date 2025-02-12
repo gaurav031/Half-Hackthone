@@ -12,7 +12,7 @@ const adminSidebarMenuItems = [
   {
     id: "dashboard",
     label: "Dashboard",
-    path: "https://tiifinwala-dashboard.streamlit.app/",
+    path: "https://categorydb.streamlit.app/",
     external: true,
     icon: <LayoutDashboard />,
   },

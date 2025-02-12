@@ -115,7 +115,7 @@ export const shoppingViewHeaderMenuItems = [
   {
     id: "Become a Service Provider",
     label: "Become a Service Provider",
-    path: "/shop/listing",
+    path: "/shop/becomeaseller",
     className: "bg-red-500 text-white p-2 rounded-md hover:bg-red-600",
   },  
   // {

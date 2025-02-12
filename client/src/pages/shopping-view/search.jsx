@@ -114,6 +114,7 @@ function SearchProducts() {
         setOpen={setOpenDetailsDialog}
         productDetails={productDetails}
       />
+      
     </div>
   );
 }

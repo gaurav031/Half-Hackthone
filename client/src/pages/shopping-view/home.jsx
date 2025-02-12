@@ -51,6 +51,7 @@ const categoriesWithIcon = [
 const brandsWithIcon = [
   { id: "Home Based-Service", label: "Home-Service", icon: Home },
   { id: "Shop Based-Service", label: "Shop-Service", icon: Store },
+  { id: "Both Service", label: "Both Service", icon: Home },
 ];
 function ShoppingHome() {
   const [isChatOpen, setIsChatOpen] = useState(false);
@@ -164,7 +165,7 @@ function ShoppingHome() {
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-8">Types of Services</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 justify-center items-center">
             {brandsWithIcon.map((brandItem) => (
               <Card
                 key={brandItem.id}
@@ -178,6 +179,7 @@ function ShoppingHome() {
               </Card>
             ))}
           </div>
+
         </div>
       </section>
 
@@ -190,13 +192,13 @@ function ShoppingHome() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {productList && productList.length > 0
               ? productList.map((productItem) => (
-                  <ShoppingProductTile
-                    key={productItem.id}
-                    handleGetProductDetails={handleGetProductDetails}
-                    product={productItem}
-                    handleAddtoCart={handleAddtoCart}
-                  />
-                ))
+                <ShoppingProductTile
+                  key={productItem.id}
+                  handleGetProductDetails={handleGetProductDetails}
+                  product={productItem}
+                  handleAddtoCart={handleAddtoCart}
+                />
+              ))
               : null}
           </div>
         </div>
